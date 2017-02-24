@@ -4,8 +4,8 @@ jdk:
 - oraclejdk8
 
 script:
-- ./gradlew check
 - ./gradlew createHubOutput
 
 after_success:
+- ls ./build/blackduck
 - bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/example-gradle-travis_bdio.jsonld
