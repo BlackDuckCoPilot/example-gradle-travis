@@ -5,4 +5,4 @@ jdk:
 
 after_success:
 - ./gradlew createHubOutput
-- bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/*bdio.jsonld
+- bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/example-gradle-travis_bdio.jsonld
