@@ -1,5 +1,7 @@
 # Black Duck CoPilot Gradle/Travis CI Example
 
+[![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis.svg?branch=master)](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis)
+
 Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
 
 ## Gradle Setup
@@ -25,4 +27,7 @@ apply plugin: 'com.blackducksoftware.hub'
 The `.travis.yml` file has been modified to upload the generated data to Black Duck CoPilot:
 
 ```yaml
+after_success:
+- ./gradlew createHubOutput
+- bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/reports/blackduck/*_bdio.jsonld
 ```
