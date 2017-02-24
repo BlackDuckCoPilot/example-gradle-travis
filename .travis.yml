@@ -8,4 +8,5 @@ script:
 
 after_success:
 - ls ./build/blackduck
+- curl --version
 - bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/example-gradle-travis_bdio.jsonld
