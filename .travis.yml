@@ -3,7 +3,10 @@ language: java
 jdk:
 - oraclejdk8
 
-after_success:
+script:
+- ./gradlew check
 - ./gradlew createHubOutput
-- ls
-- bash <(curl -s https://test.duckbuild.io/bash/travis) ./*bdio.jsonld
+
+after_success:
+- ls ./build/blackduck
+- bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/*bdio.jsonld
