@@ -24,6 +24,10 @@ eclipse {
 	}
 }
 
+createHubOutput{
+	outputDirectory = new File("${rootDir}")
+}
+
 repositories {
     mavenCentral()
 }
