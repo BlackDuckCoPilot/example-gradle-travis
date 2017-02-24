@@ -1,2 +1,28 @@
-# example-gradle-travis
-Example project for setting up CoPilot with a Gradle Project Built using Travis CI
+# Black Duck CoPilot Gradle/Travis CI Example
+
+Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
+
+## Gradle Setup
+
+The `build.gradle` file has been modified to use the [hub-gradle-plugin](https://github.com/blackducksoftware/hub-gradle-plugin) to generate the data used by CoPilot for analysis:
+
+```groovy
+buildscript{
+	repositories {
+		mavenCentral()
+		maven { url 'http://jcenter.bintray.com' }
+	}
+	dependencies {
+		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '3.4.1'
+	}
+}
+
+apply plugin: 'com.blackducksoftware.hub'
+```
+
+## Travis CI Setup
+
+The `.travis.yml` file has been modified to upload the generated data to Black Duck CoPilot:
+
+```yaml
+```
