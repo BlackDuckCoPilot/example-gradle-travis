@@ -29,5 +29,5 @@ The `.travis.yml` file has been modified to upload the generated data to Black D
 ```yaml
 after_success:
 - ./gradlew createHubOutput
-- bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/blackduck/example-gradle-travis_bdio.jsonld
+- bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/*_bdio.jsonld
 ```
