@@ -24,6 +24,10 @@ eclipse {
 	}
 }
 
+buildBom{
+	deployHubBdio false
+}
+
 repositories {
     mavenCentral()
 }

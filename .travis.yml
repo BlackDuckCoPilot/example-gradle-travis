@@ -4,5 +4,5 @@ jdk:
 - oraclejdk8
 
 after_success:
-- ./gradlew buildBom -PdeployHubBdio=false
+- ./gradlew buildBom
 - bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/blackduck/*_bdio.jsonld
