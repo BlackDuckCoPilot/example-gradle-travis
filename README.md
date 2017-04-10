@@ -15,11 +15,15 @@ buildscript{
 		maven { url 'http://jcenter.bintray.com' }
 	}
 	dependencies {
-		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '3.4.1'
+		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '4.0.0'
 	}
 }
 
 apply plugin: 'com.blackducksoftware.hub'
+
+buildBom{
+	deployHubBdio false
+}
 ```
 
 ## Travis CI Setup
@@ -28,6 +32,6 @@ The `.travis.yml` file has been modified to upload the generated data to Black D
 
 ```yaml
 after_success:
-- ./gradlew createHubOutput
+- ./gradlew buildBom
 - bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/blackduck/*_bdio.jsonld
 ```
