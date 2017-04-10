@@ -5,7 +5,7 @@ buildscript{
 		maven { url 'http://jcenter.bintray.com' }
 	}
 	dependencies {
-		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '3.4.1'
+		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '4.0.0'
 	}
 }
 
@@ -22,6 +22,10 @@ eclipse {
 		downloadSources=true
 		containers = [ 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8' ]
 	}
+}
+
+buildBom{
+	deployHubBdio false
 }
 
 repositories {
