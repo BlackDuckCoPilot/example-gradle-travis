@@ -35,4 +35,4 @@ after_success:
 - ./gradlew buildBom
 - bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/blackduck/*_bdio.jsonld
 ```
-olga
+
