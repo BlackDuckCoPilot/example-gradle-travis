@@ -36,4 +36,4 @@ after_success:
 - bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/blackduck/*_bdio.jsonld
 ```
 
-Olga Garber
+Olga
