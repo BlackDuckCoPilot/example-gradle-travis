@@ -54,6 +54,8 @@ dependencies {
 	compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.0'
 	compile group: 'commons-collections', name: 'commons-collections', version: '1.0'
 	compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.2.1'
+	compile group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '7.0.27'
+	compile group: 'org.apache.tomcat', name: 'tomcat-util', version: '7.0.27'
 }
 
 task wrapper(type: Wrapper) {
