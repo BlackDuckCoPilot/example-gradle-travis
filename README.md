@@ -4,34 +4,13 @@
 
 Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
 
-## Gradle Setup
-
-The `build.gradle` file has been modified to use the [hub-gradle-plugin](https://github.com/blackducksoftware/hub-gradle-plugin) to generate the data used by CoPilot for analysis:
-
-```groovy
-buildscript{
-	repositories {
-		mavenCentral()
-		maven { url 'http://jcenter.bintray.com' }
-	}
-	dependencies {
-		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '4.0.0'
-	}
-}
-
-apply plugin: 'com.blackducksoftware.hub'
-
-buildBom{
-	deployHubBdio false
-}
-```
-
 ## Travis CI Setup
 
-The `.travis.yml` file has been modified to upload the generated data to Black Duck CoPilot:
+The `.travis.yml` file has been modified to upload generated dependency data to Black Duck CoPilot:
 
 ```yaml
 after_success:
-- ./gradlew buildBom
+- curl https://copilot.blackducksoftware.com/scripts/init/gradle -o bds_init.gradle
+- ./gradlew --init-script bds_init.gradle buildBom -DbdsPluginVersion=5.0.0
 - bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./build/blackduck/*_bdio.jsonld
 ```
