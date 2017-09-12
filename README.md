@@ -30,6 +30,7 @@ buildBom{
 
 The `.travis.yml` file has been modified to upload the generated data to Black Duck CoPilot:
 
+
 ```yaml
 after_success:
 - ./gradlew buildBom
