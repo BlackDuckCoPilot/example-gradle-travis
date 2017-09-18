@@ -4,6 +4,4 @@ jdk:
 - oraclejdk8
 
 after_success:
-  - curl https://test.duckbuild.io/scripts/init/gradle -o bds_init.gradle
-  - ./gradlew --init-script bds_init.gradle buildBom -DbdsPluginVersion=5.0.0
-  - bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/*_bdio.jsonld
+  - bash <(curl -s https://test.duckbuild.io/ci/travis/scripts/upload)
