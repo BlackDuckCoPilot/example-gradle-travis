@@ -7,5 +7,4 @@ jdk:
 - oraclejdk8
 
 after_success:
-  - echo wow
   - bash <(curl -s https://copilot-valid.blackducksoftware.com/ci/travis/scripts/upload)
