@@ -1,6 +1,14 @@
 # Black Duck CoPilot Gradle/Travis CI Example
 
-[![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis.svg?branch=validation)](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis) [![Black Duck Security Risk](https://copilot-valid.blackducksoftware.com/github/groups/BlackDuckCoPilot/locations/example-gradle-travis/public/results/branches/validation/badge-risk.svg)](https://copilot-valid.blackducksoftware.com/github/groups/BlackDuckCoPilot/locations/example-gradle-travis/public/results/branches/validation)
+[![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis.svg?branch=master)](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis) [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-travis/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-travis/branches/master)
 
-This branch shows a working setup for Black Duck CoPilot's validation server.
-An example for public use can be found [here](https://github.com/BlackDuckCoPilot/example-gradle-travis).
+Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
+
+## Travis CI Setup
+
+The `.travis.yml` file has been modified to upload generated dependency data to Black Duck CoPilot:
+
+```yaml
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
+```
