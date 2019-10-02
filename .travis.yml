@@ -4,7 +4,7 @@ notifications:
   email: false
 
 jdk:
-- oraclejdk8
+  - openjdk8
 
 after_success:
   - bash <(curl -s https://copilot-test.blackducksoftware.com/ci/travis/scripts/upload)
