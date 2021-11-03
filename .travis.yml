@@ -7,4 +7,6 @@ jdk:
   - openjdk8
 
 after_success:
+  - export DETECT_LATEST_RELEASE_VERSION=7.2.0
+  - bash <(curl -s https://detect.synopsys.com/detect7.sh) --detect.output.path=.copilot --detect.bom.aggregate.name=copilot_bom_bdio --detect.tools=DETECTOR --blackduck.offline.mode=true --detect.bdio.output.path=.copilot --detect.bom.aggregate.remediation.mode=DIRECT --detect.bdio2.enabled=true 
   - bash <(curl -s https://copilot-valid.blackducksoftware.com/ci/travis/scripts/upload)
