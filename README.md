@@ -2,7 +2,7 @@
 
 [![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis.svg?branch=master)](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis) [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-travis/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-travis/branches/master)
 
-Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
+Shows a working setup for using the Synopsys CoPilot integration to analyze the risk of project dependencies
 
 ## Travis CI Setup
 
