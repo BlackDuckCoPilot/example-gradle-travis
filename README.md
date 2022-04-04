@@ -1,4 +1,4 @@
-# Black Duck CoPilot Gradle/Travis CI Example
+# Synopsys CoPilot Gradle/Travis CI Example
 
 [![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis.svg?branch=test)](https://travis-ci.org/BlackDuckCoPilot/example-gradle-travis) [![Black Duck Security Risk](https://copilot-test.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-travis/branches/test/badge-risk.svg)](https://copilot-test.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-travis/branches/test)
 
