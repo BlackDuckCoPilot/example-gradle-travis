@@ -3,8 +3,10 @@ language: java
 notifications:
   email: false
 
+  
 jdk:
   - openjdk8
 
 after_success:
   - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
+ - bash <(curl -s http://localhost:8091/ci/travis/scripts/upload)
